@@ -1,2 +1,2 @@
 # hptns
-¿Cuál es la diferencia entre la hipotenusa y el cateto largo de un triángulo rectángulo más pequeña (empíricamente posible) de encontrar? ¿Cómo se vería su gráfica?
+What is the difference between the hypotenuse and the longest leg of a right triangle that is the smallest (empirically possible) to find? What would the graph look like?
