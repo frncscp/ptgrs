@@ -1,4 +1,4 @@
-from main import Ptgrs
+from ptgrs_module_v1 import Ptgrs
 from mpmath import mp, mpf #for big decimal numbers
 import matplotlib.pyplot as plt #graphing
 while True:
