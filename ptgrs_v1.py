@@ -2,7 +2,7 @@ from ptgrs_module_v1 import Ptgrs
 from mpmath import mp, mpf #for big decimal numbers
 import matplotlib.pyplot as plt #graphing
 while True:
-    choice = input(f"{'*'*10}PTGRS{'*'*11}\n****github.com/frncscp****\n{'*'*26}\n\nThis program answers to the following questions:\nWhat is the difference between the hypotenuse and the longest leg of a\nright triangle that is the smallest (empirically possible) to find?\nWhat would the graph look like?\n\nBy looping throung a set of right triangles, it will store the difference\nbetween the long leg and the hypotenuse.\n\nChoose you option:\n1)Choose range and triangle sides' length.\n2)Choose the tiny leg's length and it's substraction per loop.\n(Any other option will close the program.)\n(If you get a minimum difference of 0, try to run the program again with a bigger range.)\n\nType here: ")
+    choice = input(f"{'*'*10}PTGRS{'*'*11}\n****github.com/frncscp****\n{'*'*26}\n\nThis program answers to the following questions:\nWhat is the difference between the hypotenuse and the longest leg of a\nright triangle that is the smallest (empirically possible) to find?\nWhat would the graph look like?\n\nBy looping through a set of right triangles, it will store the difference\nbetween the long leg and the hypotenuse.\n\nChoose you option:\n1)Choose range and triangle sides' length.\n2)Choose the tiny leg's length and it's substraction per loop.\n(Any other option will close the program.)\n(If you get a minimum difference of 0, try to run the program again with a bigger range.)\n\nType here: ")
     if choice != '1' and choice != '2':
         break
     elif choice == '1':
