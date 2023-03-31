@@ -4,8 +4,8 @@ class Ptgrs:
         self.h = mpf(h)
         self.c1 = mpf(c1)
         self.c2 = mpf(c2)
-    def check(self): #saber si se cumple el teorema de pitágoras
-        return self.h%((self.c1**2)+(self.c2**2))**.5 < .005
+    def check(self, epsilon = .005): #saber si se cumple el teorema de pitágoras
+        return self.h%((self.c1**2)+(self.c2**2))**.5 < epsilon
     def pitagorazo(self, lado): #aplicar teorema por despeje
         if lado == 'h':
             self.h = ((mpf(self.c1**2)) + mpf(self.c2**2))**.5
