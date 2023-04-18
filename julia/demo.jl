@@ -161,7 +161,7 @@ while true
     display(graf)
 
     if save_image == "1"
-        filename = input("Inserta el nombre del archivo: ")
+        filename = input("Type the file's name")
         savefig("$(filename).png")
     end
 
