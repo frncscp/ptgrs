@@ -1,7 +1,6 @@
 import streamlit as st
 from Ptgrs import Ptgrs
 from mpmath import mp, mpf 
-import matplotlib.pyplot as plt
 import pandas as pd
 
 st.title('Interactive demo of Ptgrs')
