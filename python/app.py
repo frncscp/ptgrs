@@ -3,6 +3,11 @@ from Ptgrs import Ptgrs
 from mpmath import mp, mpf 
 import pandas as pd
 
+st.set_page_config(
+    page_title="Pythagoras",
+    page_icon="🔺",
+    layout="wide",
+
 st.title('Interactive demo of Ptgrs')
 
 st.markdown(f"****github.com/frncscp****\n\n\nThis program answers to the following questions:\nWhat is the *difference* between the hypotenuse and the longest leg of a\nright triangle that is the smallest (empirically possible) to find?\nWhat would the graph look like?\n\nBy looping through a set of right triangles, it will store the difference\nbetween the long leg and the hypotenuse.\n\nChoose you option:\n")
