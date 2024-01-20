@@ -94,9 +94,9 @@ def draw_left_column():
                 if triang.check(): #if the triangle actually is a right triangle
                     #triangs.append({'hptns': triang.h, 'c1': triang.c1, 'c2': triang.c2})
                     triang.c2 -= resta #substracts var
-                    difftotal.append(triang.h - triang.c1) #saves the difference to a list
-                    x.append(i) #adds consecutive numbers to a list
-                    c.append(0.) #adds zeros
+                    difftotal = np.append(difftotal, triang.h - triang.c1) #saves the difference to a list
+                    x = np.append(x, i) #adds consecutive numbers to a list
+                    c = np.append(c, 0.) #adds zeros
                 triang.pitagorazo('h')
             scale = 10**resta
             st.write("Done!")
@@ -139,9 +139,9 @@ def draw_right_column():
                 if triang.check(): #if the triangle actually is a right triangle
                     #triangs.append({'hptns': triang.h, 'c1': triang.c1, 'c2': triang.c2})
                     triang.c2 -= substract #substracts var
-                    difftotal.append(triang.h - triang.c1) #saves the difference to a list
-                    x.append(i) #adds consecutive numbers to a list
-                    c.append(0.) #adds zeros
+                    difftotal = np.append(difftotal, triang.h - triang.c1) #saves the difference to a list
+                    x = np.append(x, i) #adds consecutive numbers to a list
+                    c = np.append(c, 0.) #adds zeros
                 triang.pitagorazo('h')
             scale = 10**substract
             st.write("Done!")
