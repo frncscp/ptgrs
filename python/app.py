@@ -2,6 +2,7 @@ import streamlit as st
 from Ptgrs import Ptgrs
 from mpmath import mp, mpf 
 import pandas as pd
+import numpy as np
 
 st.set_page_config(
     page_title="Pythagoras",
@@ -77,10 +78,10 @@ def draw_left_column():
                 c1, c2 = c, cc
             triang = Ptgrs(h, c1, c2) #Ptgrs class var
             resta = mpf(triang.c2/rango_1) #decides how much the tiny leg will be shrinked per loop, ej: 2cm/100Loops = 0.02
-            difftotal = [] #substractions between hypotenuse and the longest leg, it'll be later the y axis on the graph
-            x = [] #x axis
-            c = [] #full of zeros (for comparisons)
-            triangs = [] #it gives access to any given triangle (h, c1, c2)
+            difftotal = np.array() #substractions between hypotenuse and the longest leg, it'll be later the y axis on the graph
+            x = np.array() #x axis
+            c = np.array() #full of zeros (for comparisons)
+            #triangs = np.array() #it gives access to any given triangle (h, c1, c2)
             aux = 0
 
             bar_1 = st.progress(0, text= "Loading and saving all values...")
@@ -91,7 +92,7 @@ def draw_left_column():
                 if triang.h == triang.c1 == triang.c2:
                     triang.c2-resta
                 if triang.check(): #if the triangle actually is a right triangle
-                    triangs.append({'hptns': triang.h, 'c1': triang.c1, 'c2': triang.c2})
+                    #triangs.append({'hptns': triang.h, 'c1': triang.c1, 'c2': triang.c2})
                     triang.c2 -= resta #substracts var
                     difftotal.append(triang.h - triang.c1) #saves the difference to a list
                     x.append(i) #adds consecutive numbers to a list
@@ -123,10 +124,10 @@ def draw_right_column():
             rango = triang.c2/substract#tiny leg divided by the substract value is the same as the range
             #i used the range for the basic program, as this doesn't use range, i just cleared the equation
             mp.dps = round(mp.ln(rango)/2) 
-            difftotal = [] #substractions between hypotenuse and the longest leg, it'll be later the y axis on the graph
-            x = [] #x axis
-            c = [] #full of zeros (for comparisons)
-            triangs = []
+            difftotal = np.array() #substractions between hypotenuse and the longest leg, it'll be later the y axis on the graph
+            x = np.array() #x axis
+            c = np.array() #full of zeros (for comparisons)
+            #triangs = []
 
             bar_2 = st.progress(0, text= "Loading and saving all values...")
 
@@ -136,7 +137,7 @@ def draw_right_column():
                 if triang.h == triang.c1 == triang.c2:
                     triang.c2-=substract
                 if triang.check(): #if the triangle actually is a right triangle
-                    triangs.append({'hptns': triang.h, 'c1': triang.c1, 'c2': triang.c2})
+                    #triangs.append({'hptns': triang.h, 'c1': triang.c1, 'c2': triang.c2})
                     triang.c2 -= substract #substracts var
                     difftotal.append(triang.h - triang.c1) #saves the difference to a list
                     x.append(i) #adds consecutive numbers to a list
