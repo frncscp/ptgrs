@@ -14,16 +14,20 @@ st.markdown(f"****github.com/frncscp****\n\n\nThis program answers to the follow
 
 #left, right = st.columns(2)
 
-st.caption("(If you get a minimum difference of 0, try to run the program again with a bigger range.)")
 left, right = st.columns(2)
 
 status = None
 
 difftotal, x, c, scale = None, None, None, None
 
+def last_nonzero(list):
+    non_zero_indices = np.nonzero(list)[0]
+    return list[non_zero_indices[-1]] if non_zero_indices.size > 0 else None
+
 def return_results(difftotal, x, c, scale):
     aux = 0
     tiniest_diff = difftotal[-3]
+    tiniest_diff = last_nonzero(difftotal)
     for item in difftotal: #looping through the list
         item*= scale #multiply by the scale so i have integer numbers (better for efficiency while graphing)
         difftotal[aux] = item #add the scaled item to the list
