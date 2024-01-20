@@ -130,7 +130,7 @@ def draw_right_column():
                 progress = int(( (i+1) / rango) * 100)
                 bar_2.progress(progress, text= "Loading and saving all values...")
                 if triang.h == triang.c1 == triang.c2:
-                    triang.c2-substract
+                    triang.c2-=substract
                 if triang.check(): #if the triangle actually is a right triangle
                     triangs.append({'hptns': triang.h, 'c1': triang.c1, 'c2': triang.c2})
                     triang.c2 -= substract #substracts var
